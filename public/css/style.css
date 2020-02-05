@@ -1,0 +1,7 @@
+ .jumbotron-img{
+      padding-bottom:0px;
+      background-image: url("../imgs/crops.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+     }
