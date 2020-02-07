@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+<p> 
+
+writing here
+
+</p>
+
+
+<a href = "https://public.tableau.com/en-us/s/resources"> This dashboard allows the user to visualize the relationship between earthquake depth, frequency
+and distance from the trench. Earthquakes are driven by the subduction of the cold, dense oceanic crust below more bouyant continental crust. 
+As a result, most earth quakes occur in the trench formed by the contact between the downgoing slab and the continentnal crust. However, this 
+location is relatively shallow in depthj (0-10 km) and earthquakes occur up to 700 km depth. These deep earthquakes are caused by several factors, but the deepest 
+(seen as an increase in occurance at 550 -650 km depth) is mostly caused by phase transitions in 
+the minerals in the subducting slab as the experience higher pressure regimes. This same phemomenon shows up in the map where 
+the deepest earthquakes are significantly far inboard of the subducting slab as much as a few hundred KM. MY goal for 
+this visualization was to allow the user to compare the difference between the frequency of earthquakes and their depths.
+My undergraduate research focused a bit on better understanding these deep, rare earthquakes and I hope by linking the frequency of occurance
+to the depth and location, I can allow other interested users to appreciate the fascinating world of subduction. 
+
+ </a>
+  <script src="js/scripts.js"></script>
+
+  <div class='tableauPlaceholder' id='viz1581093678456' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WormEarthquakeDepth&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' 
+   style='display:none;'><param name='host_url' 
+   value='https%3A%2F%2Fpublic.tableau.com%2F' />
+    <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+    <param name='name' value='WormEarthquakeDepth&#47;Story1' />
+    <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WormEarthquakeDepth&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' /></object></div>     
+               <script type='text/javascript'>           
+                        var divElement = document.getElementById('viz1581093678456');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</body>
+</html>
