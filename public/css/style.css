@@ -5,3 +5,10 @@
       background-repeat: no-repeat;
       background-position: center;
      }
+
+
+
+#mapid { 
+    height: 800px; 
+    width: 1200px; 
+}
