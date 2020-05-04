@@ -115,6 +115,45 @@
             <p></p>
           </div><!-- /.blog-post -->
 
+          <div id="Jan20192" class="blog-post">
+            <h2 class="blog-post-title">Kepler Vizualizations</h2>
+            <p class="blog-post-meta">May 1, 2020</p>
+                  
+                  
+                  <p class = "tab"> 
+
+                   <p>My first visualization, modelled after Corey's instructions shows an animated look at the number of occurences of Raleigh's crime data through time. </p>
+                <br>
+                <p> <img src="./imgs/kepler1.PNG" alt="Raleigh Crime occrences through time"> </p>
+
+                 <p> My second visualization looks at the locations of the most prominent crime type for a given area, with the height showing the number of reports. There appear to be strong clusters of drug-related crimes and assaults reported.  </p>
+
+                <p><img src="./imgs/kepler2.PNG" alt="Raleigh Crime occurence by most prevalent type"> </p>
+
+
+                <br>
+
+                  <p>As I interacted more with the package, I realized that support for drawing node border thickness in the R version iGraph had been dropped (seemingly by error) and had not been supported by any version of iGraph for
+                many years and the capacity to build interactive tools to modify the graph on the fly was limited. I then moved to implementing the same style of graphs in the python version of iGraph, which
+                reportedly supports drawing node borders. After several hours, it became apparent that the python version of iGraph lacks support for many of the features I had used in R and is a much more limited version of the software.
+                Finally, I moved to the networkX package in python, which is the most commonly used tool for graph visualization and analysis in python. NetworkX has good support for pyplot and as an extension, has good support for
+                making interactive visualizations with Dash. After reviewing my R-iGraph sketches with our APHIS stakeholders on 4/30, my lab came to the conclusion that a simple tool to allow the selection and filtering of individual countries, one at a time to the model
+                would be the most helpful initial visualization as we began to migrate our model to real world data. A simple implementation of that interactive model output, built using plotly and Dash and hosted by heroku is availible below.
+                This interactive visualization allows for the selection of individual countries as nodes using the checkbox list, and visualizes the risk of invasion as node color and arrival phytosanitary compliance as node border color. It also 
+                allows for the selection of different graph layouts, to improve readability. Node names are availible on hover to decrease visual clutter with >10 nodes. </p>
+                <p> <a href="https://pandemic-viz.herokuapp.com/ ">pandemic-viz.herokuapp.com</a>  </p>
+
+                <p>
+                Unfortunately, although pyplot is the way most users visualize their networkX graphs, it does not seem to offer support for graphing directed graphs ( edges as direction arrows). Although I found some incredibly hacky
+                solutions to this problem online (leveraging dramatically offset and reized wingdings-style triangles as arrowheads), I could not get any of them to work in a satisfactory manner after substatial effort.  The other significant downside to using NetworkX 
+                instead of iGraph is that it does not allow the setting of individual edge attributes. Rather, edges are called by a referencing a pre-made style. This is a rather inflexible method of visualization for networks that
+                rely heavily on node attributes. As I continue in my investigation, I may switch to a different visualization package again that offers more support for edges without having to generate hundreds of unique styles.   </p>
+
+     
+            </div>
+            <p></p>
+          </div><!-- /.blog-post -->
+
          
 
 
@@ -131,7 +170,7 @@
 
 
 
-          <div id="Jan2019" class="blog-post">
+          <div id="Jan20191" class="blog-post">
             <h2 class="blog-post-title">Five Sheets Design Process</h2>
             <p class="blog-post-meta">January 5, 2020</p>
 
@@ -225,6 +264,11 @@
               <li><a href="https://thomworm.github.io/GIS715/public/politics.html">My Politics Tableau</a></li>
               <li><a href="https://thomworm.github.io/GIS715/public/earthquake.html">My Data Visualization (Earthquakes!)</a></li>
               <li><a href="https://thomworm.github.io/GIS715/public/clock.html">My Clock</a></li>
+              <li><a href="https://thomworm.github.io/GIS715/public/plotly.html">Plotly Holocaust Survivors</a></li>
+              <li><a href="https://thomworm.github.io/GIS715/public/meteorites.html">Plotly Meteorites</a></li>
+              <li><a href="https://thomworm.github.io/GIS715/public/leaflet1.html">Intro to Leaflet</a></li>
+              <li><a href="https://thomworm.github.io/GIS715/public/geoJsonExample1/usingGeoJSON.html">Denver Zoo Trees</a></li>
+              <li><a href="https://thomworm.github.io/GIS715/public/kepler.html">Kepler Crime Visualizations</a></li>
             </ol>
           </div>
         </aside><!-- /.blog-sidebar -->
