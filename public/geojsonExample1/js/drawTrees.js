@@ -8,7 +8,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoidGhvbXdvcm0iLCJhIjoiY2s2bDY1ZXJyMDhrbTNqbjB6YWV4ZG91dyJ9.RRKk7tlQbdvJBLWnXwG9QA'
 }).addTo(mymap);
 
-var gjData = 'data1/zootrees.geojson'
+var gjData = 'data/zootrees.geojson'
 
 
 
