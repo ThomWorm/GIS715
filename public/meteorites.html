@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <!-- Include Plotly.js file from CDN -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <!-- DIV will be used for charts -->
+  <div id="mapDiv"></div>
+  <script>
+    // JS code for plot
+    Plotly.d3.csv('https://raw.githubusercontent.com/bcdunbar/datasets/master/meteorites_subset.csv', function (err,
+      rows) {
+
+      var classArray = unpack(rows, 'class');
+      var classes = [...new Set(classArray)];
+
+      function unpack(rows, key) {
+        return rows.map(function (row) {
+          return row[key];
+        });
+      }
+      var data = classes.map(function (classes) {
+        var rowsFiltered = rows.filter(function (row) {
+          return (row.class === classes);
+        });
+        return {
+          type: 'scattermapbox',
+          name: classes,
+          lat: unpack(rowsFiltered, 'reclat'),
+          lon: unpack(rowsFiltered, 'reclong')
+        };
+      });
+
+      var layout = {
+        title: 'Demonstration of Meteorite Landing using Plotly.js',
+        font: {
+          color: 'white'
+        },
+        dragmode: 'zoom',
+        mapbox: {
+          center: {
+            lat: 38.03697222,
+            lon: -90.70916722
+          },
+          style: 'light',
+          zoom: 2
+        },
+        paper_bgcolor: '#191A1A',
+        plot_bgcolor: '#191A1A',
+        showlegend: true,
+        annotations: [{
+          x: 0,
+          y: 0,
+          text: 'NASA',
+          showarrow: false
+        }]
+      };
+      Plotly.setPlotConfig({
+        mapboxAccessToken: 'pk.eyJ1IjoidGhvbXdvcm0iLCJhIjoiY2s2bDY1ZXJyMDhrbTNqbjB6YWV4ZG91dyJ9.RRKk7tlQbdvJBLWnXwG9QA'
+      });
+      Plotly.plot('mapDiv', data, layout);
+    });
+  </script>
+  </div>
+</body>
+
+</html>

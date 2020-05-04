@@ -1,0 +1,71 @@
+<!doctype html>
+
+  <head>
+       <!-- Include Plotly.js -->
+       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   </head>
+
+   <body>
+       <p>
+  /// Chart is below this. \\\
+</p>
+<div id="myDiv">
+    <!-- Plotly chart will be drawn inside this DIV -->
+</div>
+<p>
+  ^^^ Chart is above this. ^^^
+</p> 
+<script>
+var layout = {
+            title: {
+                text:"1945 Jewish Survivors in Budapest",
+                font: {
+                    family:"Arial",
+                    size:25
+                }
+            },
+            xaxis:{
+                title:{
+                    text: 'Districts',
+                    font: {
+                        family:'Circular, monospace',
+                        size: 18,
+                        color: '#7f7f7f'
+                    }
+                }
+            },
+            yaxis:{
+                title:{
+                    text: 'Number of Survivors',
+                    font: {
+                        family:'Circular, monospace',
+                        size: 18,
+                        color: '#7f7f7f'
+                    }
+                }
+            },
+    };
+    var trace = {
+        x: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'Unk'],
+        y: [15, 115, 71, 125, 626, 727, 1349, 489, 202, 71, 59, 61, 124, 218, 4],
+       mode: 'lines+markers',
+        type: 'bar',
+        name:"Female",
+    };
+
+     var trace2 = {
+        x: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'Unk'],
+        y: [7, 76, 41, 70, 394, 482, 830, 295, 123, 51, 32, 42, 74, 163,4],
+       mode: 'lines+markers',
+        type: 'bar',
+        name: "Male",
+    };
+
+    var data = [trace, trace2];
+    <!-- Draw plotly chart specified by my trace in my div tag. -->
+    Plotly.newPlot('myDiv', data,layout); 
+</script>
+
+   </body>
+
+</html>
